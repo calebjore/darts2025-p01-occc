@@ -1,0 +1,15 @@
+# Byte-compiled files and caches
+**/__pycache__/
+*.py[cod]
+*.pyo
+
+# Anaconda-specific folders
+anaconda_projects/
+*.conda
+*.egg-info/
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
