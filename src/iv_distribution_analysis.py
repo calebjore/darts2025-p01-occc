@@ -147,11 +147,15 @@ def get_avg_param_per_module(files, dir, sun_list=[1]):
     
     # Iterate through files
     for file in files:
+        
+        # file_actual is the true name of the file to pass to S.iv_analysis()
+        # file is the modified name for get_filename_metadata() to parse properly
         file_actual = file
         if batch_data_dict['initial_basename_underscore']:
             file_actual = file_actual.replace('-', '_', 1)
         print(f"Analyzing {file_actual}")
         filepath = f"{dir}/{file_actual}"
+
         for sun in sun_list:
             data_dict = {}
             metadata = get_filename_metadata(file)
